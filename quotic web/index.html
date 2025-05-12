@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quotic</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Firebase SDKs using Modules -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAFldBIANVUypnbRN8n81du3f6NMUyuC48",
+      authDomain: "quotic-web.firebaseapp.com",
+      projectId: "quotic-web",
+      storageBucket: "quotic-web.firebasestorage.app",
+      messagingSenderId: "1080053011132",
+      appId: "1:1080053011132:web:12c8a41a30bbed732cf6b9",
+      measurementId: "G-B9Q16B6F60"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Quotic</h1>
+    <nav class="nav">
+      <a href="#">Explore</a>
+      <a href="#">Account</a>
+      <a href="#">History</a>
+      <button class="settings-btn">⚙️</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="title">Generate a Quote</h2>
+
+    <div class="selectors">
+      <select id="author-select" required>
+        <option value="" disabled selected hidden>Author</option>
+        <option value="author">Random Author</option>
+        <option value="einstein">Albert Einstein</option>
+        <option value="yutang">Lin Yutang</option>
+        <option value="napoleon">Napoleon Bonaparte</option>
+        <option value="imam">Imam Ali (A.S)</option>
+        <option value="sina">Ibn Sina</option>
+        <option value="muhammad">Muhammad</option>
+        <option value="persian">Persian Proverb</option>
+        <option value="rumi">Rumi</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div>
+
+    <button class="generate-btn">Generate Quote</button>
+
+    <div class="quote-box">
+      <p class="quote">"Click 'Generate Quote' to get inspired!"</p>
+      <p class="author">- Quotic</p>
+    </div>
+
+    <button class="favourite-btn">⭐ Favourite</button>
+
+    <p class="footer">Made by Muneeb</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
